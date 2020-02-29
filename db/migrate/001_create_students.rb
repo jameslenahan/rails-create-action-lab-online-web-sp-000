@@ -1,10 +1,5 @@
-class CreateStudents < ActiveRecord::Migration
-  def change
-    create_table :students do |t|
-      t.string :first_name, null: false
-      t.string :last_name, null: false
-
-      t.timestamps null: false
-    end
+class Student < ActiveRecord::Base
+  def to_s
+    self.first_name + " " + self.last_name
   end
 end
